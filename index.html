@@ -43,6 +43,13 @@
         margin: 15px;
       }
       @media(max-width:576px){
+        .outer{
+        display: flex;
+        justify-content: left;
+        flex-wrap: wrap;
+        width: 100%;
+        max-width: 414px;
+      }
         main {
         width: 100%;
         padding: 40px;
@@ -196,6 +203,10 @@
         align-content: center;
         margin-bottom: 20px;
         max-height: 288px;
+      }
+
+      .image-region img{
+        width: 100%;
       }
 
       /* 開啟時的橫向 viewport 版面。是否真的旋轉仍取決於瀏覽器與裝置授權。 */
