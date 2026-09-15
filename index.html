@@ -1,0 +1,384 @@
+<!doctype html>
+<html lang="zh-TW">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CP廠商串接公用版型</title>
+
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: Inter, "Noto Sans TC", system-ui, sans-serif;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        min-height: 100dvh;
+        display: grid;
+        place-items: center;
+        color: #edf2ff;
+        background: radial-gradient(circle at top, #4a90e2, #4a90e2 56%);
+      }
+      .outer{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+      }
+      main {
+        width: min(680px, calc(100% - 40px));
+        padding: 40px;
+        border: 1px solid #ffffff25;
+        border-radius: 24px;
+        background: #121a31cc;
+        box-shadow: 0 24px 70px #0008;
+        margin: 15px;
+      }
+      h1 {
+        margin: 0 0 12px;
+        font-size: clamp(1.75rem, 5vw, 2.5rem);
+      }
+      p {
+        color: #bac6e5;
+        line-height: 1.65;
+      }
+      .buttons {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+        margin-top: 28px;
+      }
+      button {
+        border: 0;
+        border-radius: 14px;
+        padding: 18px 16px;
+        color: #071127;
+        background: #a9c7ff;
+        font: inherit;
+        font-weight: 750;
+        cursor: pointer;
+        transition:
+          transform 0.18s,
+          background 0.18s;
+      }
+      button:hover,
+      button:focus-visible {
+        background: #d6e4ff;
+        transform: translateY(-2px);
+        outline: 3px solid #fff8;
+        outline-offset: 3px;
+      }
+      .change-page{
+        border: 0;
+        border-radius: 14px;
+        padding: 18px 16px;
+        color: #071127;
+        background: #a9c7ff;
+        font: inherit;
+        font-weight: 750;
+        cursor: pointer;
+        transition:
+          transform 0.18s,
+          background 0.18s;
+      }
+      .change-page a{
+        text-align: center;
+        text-decoration: none;
+        color: #071127;
+        display: block;
+        text-decoration: none;
+      }
+      .change-page:hover,
+      .change-page:focus-visible{
+        background: #d6e4ff;
+        transform: translateY(-2px);
+        outline: 3px solid #fff8;
+        outline-offset: 3px;
+      }
+      .note {
+        margin: 24px 0 0;
+        font-size: 0.86rem;
+      }
+
+      .modal[hidden] {
+        display: none;
+      }
+      .modal {
+        position: fixed;
+        z-index: 10;
+        inset: 0;
+        display: grid;
+        place-items: center;
+        padding: max(16px, env(safe-area-inset-top))
+          max(16px, env(safe-area-inset-right))
+          max(16px, env(safe-area-inset-bottom))
+          max(16px, env(safe-area-inset-left));
+        background: #030713c9;
+      }
+      .modal__panel {
+        width: min(1100px, 100%);
+        height: min(760px, 88dvh);
+        display: grid;
+        grid-template-rows: auto 1fr;
+        overflow: hidden;
+        border: 1px solid #ffffff42;
+        border-radius: 18px;
+        background: #fff;
+        box-shadow: 0 20px 70px #000a;
+      }
+      .modal__bar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        padding: 0px 12px 0px 18px;
+        background: #10182d;
+        color: #eaf0ff;
+      }
+      .modal__title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 0.92rem;
+      }
+      .close {
+        min-width: 10px;
+        padding: 5px 10px;
+        border-radius: 50%;
+        color: white;
+        background: #33415f;
+      }
+      iframe {
+        display: block;
+        width: 100%;
+        height: 100%;
+        border: 0;
+        background: white;
+      }
+      .modal__hint {
+        position: absolute;
+        bottom: max(20px, env(safe-area-inset-bottom));
+        left: 50%;
+        max-width: calc(100% - 32px);
+        transform: translateX(-50%);
+        padding: 8px 12px;
+        border-radius: 999px;
+        background: #111a31e8;
+        color: #dbe6ff;
+        font-size: 0.8rem;
+        text-align: center;
+      }
+
+      .image-region{
+        width: 100%;
+        border-radius: 10px;
+        overflow: hidden;
+        justify-content: center;
+        align-content: center;
+        margin-bottom: 20px;
+        max-height: 288px;
+      }
+
+      /* 開啟時的橫向 viewport 版面。是否真的旋轉仍取決於瀏覽器與裝置授權。 */
+      @media (max-width: 900px) and (orientation: landscape) {
+        main {
+          padding: 24px;
+        }
+        .modal__panel {
+          width: min(1200px, 70%);
+          height: calc(100dvh - 75px);
+          border-radius: 12px;
+        }
+        .modal {
+          padding: 12px;
+        }
+      }
+      @media (max-width: 560px) and (orientation: portrait) {
+        .buttons {
+          grid-template-columns: 1fr;
+        }
+        main {
+          padding: 28px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="outer">
+      <main>
+        <div class="image-region">
+            <img src="./image/template-1-img.svg" alt="">
+        </div>
+        <h1>地下城與勇士養成 儲值商店</h1>
+        <p>按下按鈕會保留此頁，並以彈窗載入外部網站。</p>
+        <div class="buttons">
+          <button type="button" data-demo="demoOne">本頁瀏覽</button>
+          <div class="change-page"><a href="https://swdplat.github.io/Manufacturer-template/template-1/index" target="_blank">新分頁開啟</a></div>
+        </div>
+        <!-- <p class="note">
+          提醒：<br />1.以下兩個按鈕所載入的網頁不同之處，在於一個是header浮動樣式，另一個是header固定樣式，請對照比較。<br />2.瀏覽網頁時，建議同時使用android、iphone手機查看，確定網頁在不同的手機作業系統之下可以有一致的樣式呈現。<br />3.跳轉至完整billing頁觀看，請點
+          <a
+            href="./billing-web.html"
+            style="text-decoration: none; font-size: 20px"
+            target="_blank"
+            >這裡</a
+          >
+        </p> -->
+      </main>
+      <main>
+        <div class="image-region">
+            <img src="./image/template-2-img.svg" alt="">
+        </div>
+        <h1>WEB STORE儲值商店</h1>
+        <p>按下按鈕會保留此頁，並以彈窗載入外部網站。</p>
+        <div class="buttons">
+          <button type="button" data-demo="demoOne">本頁瀏覽</button>
+          <div class="change-page"><a href="https://swdplat.github.io/Manufacturer-template/template-2/index" target="_blank">新分頁開啟</a></div>
+        </div>
+        <!-- <p class="note">
+          提醒：<br />1.以下兩個按鈕所載入的網頁不同之處，在於一個是header浮動樣式，另一個是header固定樣式，請對照比較。<br />2.瀏覽網頁時，建議同時使用android、iphone手機查看，確定網頁在不同的手機作業系統之下可以有一致的樣式呈現。<br />3.跳轉至完整billing頁觀看，請點
+          <a
+            href="./billing-web.html"
+            style="text-decoration: none; font-size: 20px"
+            target="_blank"
+            >這裡</a
+          >
+        </p> -->
+      </main>
+    </div>
+
+
+    <section
+      class="modal"
+      id="webModal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      hidden
+    >
+      <div class="modal__panel">
+        <div class="modal__bar">
+          <span class="modal__title" id="modalTitle">外部網頁</span>
+          <button
+            class="close"
+            id="closeModal"
+            type="button"
+            aria-label="關閉彈窗"
+          >
+            ✕
+          </button>
+        </div>
+        <!-- 不使用 sandbox，避免限制外部頁面的表單、登入與互動功能。 -->
+        <iframe
+          id="webFrame"
+          title="外部網頁內容"
+          allow="clipboard-read; clipboard-write; fullscreen; payment"
+        ></iframe>
+      </div>
+      <div class="modal__hint" id="orientationHint" hidden></div>
+    </section>
+
+    <script>
+      // 集中管理網址：可直接替換為您的兩個外部網頁 URL。
+      // 範例站點用於確認 iframe 載入流程；正式服務須允許被 iframe 嵌入。
+      const DEMO_URLS = {
+        demoOne: {
+          label: "header 浮動版",
+          url: "https://swdplat.github.io/Manufacturer-template/template-1/index",
+        },
+        demoTwo: {
+          label: "header 固定板",
+          url: "https://swdplat.github.io/Manufacturer-template/template-2/index",
+        },
+      };
+
+      const modal = document.querySelector("#webModal");
+      const frame = document.querySelector("#webFrame");
+      const title = document.querySelector("#modalTitle");
+      const closeButton = document.querySelector("#closeModal");
+      const hint = document.querySelector("#orientationHint");
+      let opener = null;
+      let requestedFullscreen = false;
+
+      const isMobile = window.matchMedia(
+        "(pointer: coarse) and (max-width: 900px)",
+      ).matches;
+
+      async function tryLandscapeLock() {
+        if (!isMobile || !screen.orientation?.lock) return;
+        try {
+          // 多數 Android 瀏覽器要求先進入 fullscreen 才能鎖定方向。
+          if (
+            !document.fullscreenElement &&
+            document.documentElement.requestFullscreen
+          ) {
+            await document.documentElement.requestFullscreen();
+            requestedFullscreen = true;
+          }
+          await screen.orientation.lock("landscape");
+          hint.textContent = "已嘗試鎖定橫向畫面";
+          hint.hidden = false;
+        } catch (error) {
+          // iOS Safari 與部分 WebView 不支援或不允許鎖定，彈窗仍會依 viewport 自適應。
+          // hint.textContent = "此裝置未允許鎖定方向，彈窗仍會自適應畫面";
+          hint.hidden = false;
+        }
+      }
+
+      async function releaseOrientation() {
+        try {
+          screen.orientation?.unlock?.();
+        } catch (_) {
+          /* 忽略不支援的瀏覽器 */
+        }
+        if (
+          requestedFullscreen &&
+          document.fullscreenElement &&
+          document.exitFullscreen
+        ) {
+          try {
+            await document.exitFullscreen();
+          } catch (_) {
+            /* 使用者可能已自行離開全螢幕 */
+          }
+        }
+        requestedFullscreen = false;
+      }
+
+      async function openModal(demo, button) {
+        opener = button;
+        title.textContent = demo.label;
+        frame.src = demo.url;
+        modal.hidden = false;
+        document.body.style.overflow = "hidden";
+        closeButton.focus();
+        // 必須由使用者按鈕事件直接觸發，才有機會取得方向/全螢幕權限。
+        await tryLandscapeLock();
+      }
+
+      async function closeModal() {
+        modal.hidden = true;
+        frame.src = "about:blank"; // 關閉後停止外部頁面執行與影音播放
+        hint.hidden = true;
+        document.body.style.overflow = "";
+        await releaseOrientation();
+        opener?.focus();
+      }
+
+      document.querySelectorAll("[data-demo]").forEach((button) => {
+        button.addEventListener("click", () =>
+          openModal(DEMO_URLS[button.dataset.demo], button),
+        );
+      });
+      closeButton.addEventListener("click", closeModal);
+      modal.addEventListener("click", (event) => {
+        if (event.target === modal) closeModal();
+      });
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape" && !modal.hidden) closeModal();
+      });
+    </script>
+  </body>
+</html>
