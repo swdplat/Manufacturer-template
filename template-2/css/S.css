@@ -112,6 +112,7 @@ nav .nav_box .menu_box {
   text-align: right;
   vertical-align: middle;
   position: relative;
+	margin:38px 0 0 0;
   padding: 15px 20px 15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -139,7 +140,7 @@ nav .nav_box .menu_box {
 nav .nav_box .menu_box li {
   display: inline-block;
   margin:0 0;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 @media (max-width: 768px) {

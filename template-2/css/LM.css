@@ -1259,7 +1259,7 @@ ul.menu li:hover {
 }
 #wrapper .record ul ol img {width:100%;}
 #wrapper .record ul dl {
-	width:22%;
+	width:25%;
 	height:auto;
 	margin:1% 1% 0 0;
 	padding:1% 0;
@@ -1273,7 +1273,7 @@ ul.menu li:hover {
 	float:left;
 }
 #wrapper .record ul .ID {
-    width:77%;
+    width:74%;
 	margin:0 0% 0 0;
 	padding:0 0;
 	display:inline;
@@ -1312,8 +1312,8 @@ ul.menu li:hover {
 #wrapper .record #tab {
 	position:relative;
     z-index:3;
-	width:80%;
-	margin:0 10% 4% 10%;
+	width:86%;
+	margin:0 7% 4% 7%;
 	padding:0 0;
 	float:left;
 }
@@ -1380,8 +1380,8 @@ ul.menu li:hover {
 	float:left;
 }
 #wrapper .record .date .title_box {
-	width:21%;
-	margin:0% 2% 0 0;
+	width:26%;
+	margin:0% 0% 0 0;
 	padding:2% 0;
 	font-family: "微軟正黑體", "PingFang";
 	font-size:18px;
@@ -1393,7 +1393,7 @@ ul.menu li:hover {
 	float:left;
 }
 #wrapper .record .date .calendar_box {
-	width:77%;
+	width:75%;
 	margin:0 0% 2% 0;
 	padding:1.5% 0;;
 	display:inline;
@@ -1475,7 +1475,7 @@ ul.menu li:hover {
             margin: 0;
         }
 .input {
-	width:77%;
+	width:74%;
 	height:auto;
 	margin:1% 0 0 0;
 	padding:1.5% 2%;
