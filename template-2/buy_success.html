@@ -5,15 +5,15 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, user-scaleble=yes, initial-scale=1.0, maximum-scale=2.0" />
 
-<title>地下城與勇士養成 儲值商店</title>
-<meta name="description" content="地下城與勇士養成, NEXON Company, 遊戲,角色扮演, MMORPG, MyCard APP, 儲值,禮包,商店,教學,點數">
-<meta name="description" content="地下城與勇士養成" />
-<meta property="og:title" content="地下城與勇士養成 儲值商店" />
+<title>WEB STORE儲值商店</title>
+<meta name="description" content="遊戲,角色扮演, MMORPG, MyCard APP, 儲值,禮包,商店,教學,點數">
+<meta name="description" content="儲值商店" />
+<meta property="og:title" content="儲值商店" />
 <meta property="og:type" content="website" />
 <!-- 到時候放上線的正式網址 -->
 <meta property="og:url" content="到時候放上線的正式網址" />
 <meta property="og:image" content="" />
-<meta property="og:description" content="地下城與勇士養成" />
+<meta property="og:description" content="儲值商店" />
 <meta property="og:site_name" content="MyCard" />
 
 
@@ -27,10 +27,7 @@
 
 <!-- jquery引入檔 -->
 <script src="js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="js/tab.js"></script>
-<script type="text/javascript" src="js/dropdown.js"></script>
 <script type="text/javascript" src="js/index.js"></script>
-
 	
 <!-- google fonts 字型 -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -45,11 +42,7 @@
 <!-- 導覽列 -->
     <nav>
         <div class="nav_box">
-            <div class="logo">
-                <a target="_blank" href="https://aradidle.nexon.com/"><img src="img/game_logo.png"></a>
-            </div>
-
-            <div class="burger_menu">
+          <div class="burger_menu">
                 <div class="burger_menu_box">
                     <span></span>
                     <span></span>
@@ -59,31 +52,20 @@
             
 
             <ul class="menu_box">
+				<div class="logo"><img src="img/nexon_w.png"></div>
                 <li id="nav_mall" class="itembox drop-down">
-                    <a class="active" target="_self" href="index.html">台灣商店</a>
+                    <a class="active" target="_self" href="index.html">商品</a>
                 </li>
                 <li id="nav_mall" class="itembox drop-down">
-                    <a target="_self" href="index2.html">港澳商店</a>
+                    <a target="_self" href="index2.html">天天抽好禮</a>
                 </li>
                 <li id="nav_record">
                     <a target="_self" href="record.html">購買紀錄查詢</a>
                 </li>
             </ul>
 			
-			<ul class="login_box">
-			  <div class="nav_team">冒險團名稱：</div>
-			  <div class="nav_name">
-                            <div class="dropdownbox">
-                              <p>請選擇冒險團 ⇅</p>
-                            </div> 
-                            <ul class="menu">
-                                <li>TEST_NAME&ensp;LV.75</li>
-                                <li>龍神奧爾斯帝德&ensp;LV.60</li>
-                                <li>北神三世&ensp;LV.55</li>
-                                <li>金州四爺湯普森&ensp;LV.36</li>
-                                <li>五精英戰士&ensp;LV.25</li> 
-                            </ul>
-		      </div>
+            <ul class="login_box">
+              <div class="nav_name">測試玩家帳號</div>
               <div id="nav_logout_btn">登出</div>
             </ul>
         </div>
@@ -91,6 +73,7 @@
 
 <!-- 主視覺 -->
 <div id="wrapper">
+<div id="black_screen">
   <div id="success">
 		<h1>購買成功</h1>
 		<ul>恭禧獲得獎勵，您的序號：</ul>
@@ -104,21 +87,35 @@
 
 
 	
-	<div id="footer">
-	  <div id="rank">
+  <div id="footer">
+	  <div id="option">
+			<div class="community">
+			    <li><a target="_blank" href="#"><img src="img/community/fb.png"></a></li>
+			    <li><a target="_blank" href="#"><img src="img/community/IG.png"></a></li>
+			    <li><a target="_blank" href="#"><img src="img/community/Threads.png"></a></li>
+			    <li><a target="_blank" href="#"><img src="img/community/X.png"></a></li>
+		        <li><a target="_blank" href="#"><img src="img/community/YT.png"></a></li>
+			</div>	
+		    <div class="download">
+			  <div class="terms2"><a href="http://m.nexon.com/terms/27" target="blank">使用者條款</a> ︱ <a href="http://m.nexon.com/terms/29" target="blank">個人隱私權</a></div>
+				<div class="terms"><a href="http://m.nexon.com/terms/27" target="blank">使用者條款</a> ︱ <a href="http://m.nexon.com/terms/29" target="blank">個人隱私權</a></div>
+		    </div>
+	  </div>
+	  
+	  <dd><img src="img/mycard_logo.svg"></dd>
+            <dl><img src="img/nexon_w.png"></dl>
+	  
+	    
+  <div id="rank">
 	    <div class="age"><img src="img/class12.png"></div>
 	    <div class="rule">本遊戲為輔導級 (12+) ，其遊戲情節涉及暴力、不當言語、戀愛交友內容<br>
 本遊戲為免費使用，遊戲內另提供購買虛擬遊戲幣，物品等付費服務<br>
 請注意遊戲時間，避免沉迷</div>
 	    <div class="rule2">本遊戲為輔導級 (12+) ，其遊戲情節涉及暴力、不當言語、戀愛交友內容。本遊戲為免費使用，遊戲內另提供購買虛擬遊戲幣，物品等付費服務。請注意遊戲時間，避免沉迷</div>
 	  </div>
-	    <div class="terms2"><a href="http://m.nexon.com/terms/27" target="blank">使用者條款</a> ︱ <a href="http://m.nexon.com/terms/29" target="blank">個人隱私權</a></div>
-		
-	    <dd><img src="img/mycard_logo.svg"></dd>
-            <dl><img src="img/nexon_w.png"></dl>
-	    <div class="terms"><a href="http://m.nexon.com/terms/27" target="blank">使用者條款</a> ︱ <a href="http://m.nexon.com/terms/29" target="blank">個人隱私權</a></div>
-	    	  
-	</div>
+			
+  </div>
+</div>
 </div>
 	
 </body>

@@ -162,7 +162,8 @@ nav .nav_box .login_box #nav_logout_btn .logout_icon {
 	display:inline;
 	float:left;
 }
-nav .nav_box .login_box #nav_logout_btn .logout_icon img {width:100%;}nav .nav_box .login_box .nav_team {
+nav .nav_box .login_box #nav_logout_btn .logout_icon img {width:100%;}
+nav .nav_box .login_box .nav_team {
 	width:auto;
 	margin:2.2% 3% 0 0%;
 	padding:0 0;
@@ -173,7 +174,7 @@ nav .nav_box .login_box #nav_logout_btn .logout_icon img {width:100%;}nav .nav_b
 	font-weight:normal;
 	color: #ffffff;
 	text-align:right;
-        white-space: nowrap;
+    white-space: nowrap;
 	float:right;	
 }
 nav .nav_box .login_box .nav_name {
@@ -260,12 +261,6 @@ nav .nav_box .menu_box li {
   font-size: 18px;
 }
 
-@media (max-width: 768px) {
-  nav .nav_box .menu_box li {F
-    width: 100%;
-    max-width: 100%;
-  }
-}
 
 nav .nav_box .menu_box li a {
   padding: 15px 20px;
@@ -275,29 +270,9 @@ nav .nav_box .menu_box li a {
   transition: 0.5s;
   cursor: pointer;
 }
-
-@media (max-width: 768px) {
-  nav .nav_box .menu_box li a {
-    display: block;
-    padding: 15px 20px;
-    text-align: left;
-    background-color: #333;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-  }
-}
-
 nav .nav_box .menu_box li a.active {
   color: #ff9c00;
 }
-
-@media (max-width: 768px) {
-  nav .nav_box .menu_box li + li {
-    margin-left: 0px;
-    border-top: 1px solid #6c6c6c;
-  }
-}
-
 nav .nav_box .menu_box #nav_login > a {
   padding: 15px 15px 15px 0;
   background-image: url(https://image.mycard520.com/maplestorym/images/icon_arrow_w.png);
@@ -305,23 +280,13 @@ nav .nav_box .menu_box #nav_login > a {
   background-size: 8px;
   background-position: right center;
 }
-
-@media (max-width: 768px) {
-  nav .nav_box .menu_box #nav_login > a {
-    padding: 15px 20px;
-    background-position: right 20px center;
-  }
-}
-
 nav .nav_box .menu_box .drop-down {
   position: relative;
 }
-
 nav .nav_box .menu_box .drop-down .item {
   width: 100%;
   padding: 20px;
 }
-
 nav .nav_box .menu_box .drop-down .submenu {
   /*動態效果*/
   position: absolute;
@@ -332,13 +297,6 @@ nav .nav_box .menu_box .drop-down .submenu {
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
-
-@media (max-width: 768px) {
-  nav .nav_box .menu_box .drop-down .submenu {
-    top: 46px;
-  }
-}
-
 nav .nav_box .menu_box .drop-down .submenu .submenu-item {
   background: #333;
   color: #eee;
@@ -548,22 +506,40 @@ ul.menu li:hover {
 #wrapper {
 	width:100%;
 	height:auto;
-	margin:36px 0;
+	margin:0;
 	padding:0 0 0 0;
-	background-image: url(../img/main_visual.jpg);
-	background-size:100%;
-	background-repeat: no-repeat;
+	background-color:#2a2623;
 	float:left;
 }
 #wrapper .main_visual {
 	width:100%;
-	height:320px;
-	margin:0 0 0 0;
+	height:auto;
+	margin:36px 0 0 0;
 	padding:0 0;
+	background-image: url(../img/main_visual.jpg);
+	background-size:100%;
+	background-position: top center;
+	background-repeat: no-repeat;
 	float:left;
 }
-#wrapper .main_visual img {width:100%;}
-
+#screen {
+    position:relative;
+	z-index:5;
+	width:100%;
+	height:auto;
+	margin:0;
+	padding:0;
+	display:block;
+	background: linear-gradient(to bottom,  rgba(51,51,51,0.8) 0%,rgba(51,51,51,0.7) 100%);
+    float:left;
+}
+#wrapper #space {
+	width:100%;
+	height:18px;
+	margin:0;
+	padding:0;
+	float:left;
+}
 
 /*登入彈窗-1*/
 #wrapper #login_callout {
@@ -897,7 +873,7 @@ ul.menu li:hover {
 #wrapper #tresure_title {
     position:relative;
 	width:76%;
-	margin:1% 12% 0% 12%;
+	margin:320px 12% 0% 12%;
 	padding:0% 0% 0.5% 0%;
 	float:left;
 }
@@ -1122,13 +1098,13 @@ ul.menu li:hover {
 	float:left;
 }
 #success .btn_home {
-	width:60%;
+	width:70%;
 	height:auto;
-	margin:4% 20% 0% 20%;
-	padding:2.5% 0;
-	border-radius:14px;
-	background: linear-gradient(to bottom,  rgba(224,80,76,1) 0%,rgba(217,44,44,1) 100%);
-    font-family: "微軟正黑體", "PingFang"; 
+	margin:4% 15% 0 15%;
+	padding:3.5% 0;
+	border-radius:0px;
+	background: linear-gradient(to right,  rgba(243,106,3,1) 0%,rgba(243,88,3,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    font-family: "微軟正黑體", "PingFang";
 	font-size:20px;
 	line-height: 20px;
 	font-weight: bold;
@@ -1212,13 +1188,13 @@ ul.menu li:hover {
 	float:left;
 }
 #fail .btn_home {
-	width:60%;
+	width:70%;
 	height:auto;
-	margin:4% 20% 0% 20%;
-	padding:2.5% 0;
-	border-radius:14px;
-	background: linear-gradient(to bottom,  rgba(224,80,76,1) 0%,rgba(217,44,44,1) 100%);
-    font-family: "微軟正黑體", "PingFang"; 
+	margin:4% 15% 0 15%;
+	padding:3.5% 0;
+	border-radius:0px;
+	background: linear-gradient(to right,  rgba(243,106,3,1) 0%,rgba(243,88,3,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    font-family: "微軟正黑體", "PingFang";
 	font-size:20px;
 	line-height: 20px;
 	font-weight: bold;
@@ -1236,7 +1212,7 @@ ul.menu li:hover {
 	margin:8% 35% 0 35%;
 	padding:1.5% 0 2% 0;
 	border-radius:5px;
-	background-color:#f9f9f9; 
+	background-color:#e4dcca;
 	float:left;
 }
 #wrapper .record ul {
@@ -1499,8 +1475,7 @@ ul.menu li:hover {
 	height:auto;
 	margin:2% 5% 0% 5%;
 	padding:0% 0% 2% 0%;
-	border-top:1px solid #efefef;
-	background-color: #ffffff;
+	background-color:#2a2623;
 	border-radius:5px;
 	float:left;
 }
@@ -1581,8 +1556,8 @@ ul.menu li:hover {
 	float:left;
 }
 #footer .age {
-	width:2.5%;
-	margin:0 1% 0 38%;
+	width:3.2%;
+	margin:0 1% 0 35%;
 	padding:1% 0;
         display:inline;
 	float:left;

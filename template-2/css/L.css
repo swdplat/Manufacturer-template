@@ -466,7 +466,7 @@ ul.menu li:hover {
 #wrapper {
 	width:100%;
 	height:auto;
-	margin:36px 0;
+	margin:36px 0 0 0;
 	padding:0 0 0 0;
 	background-image: url(../img/main_visual.png);
 	background-size:100%;
@@ -475,12 +475,22 @@ ul.menu li:hover {
 }
 #wrapper .main_visual {
 	width:100%;
-	height:500px;
+	height:0;
 	margin:0 0 0 0;
 	padding:0 0;
 	float:left;
 }
-#wrapper .main_visual img {width:100%;}
+#wrapper #black_screen {
+    position:relative;
+	left:0;
+	top:0;
+	width:100%;
+	height:100%;
+	margin:0;
+	padding:0;
+	background: linear-gradient(to right,  rgba(217,217,217,0.9) 0%,rgba(217,217,217,0.8) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    float:left;
+}
 
 
 /*登入彈窗-1*/
@@ -809,7 +819,7 @@ ul.menu li:hover {
 #wrapper #tresure_title {
     position:relative;
 	width:76%;
-	margin:1% 12% 0% 12%;
+	margin:500px 12% 0% 12%;
 	padding:0% 0% 0.5% 0%;
 	float:left;
 }
@@ -1034,7 +1044,7 @@ ul.menu li:hover {
 	height:auto;
 	margin:8% 35% 5% 35%;
 	padding:3% 0 3% 0;
-	background-color:#f9f9f9;
+	background-color:#f2f2f2;
 	border-radius:5px;
 	float:left;
 }
@@ -1058,7 +1068,7 @@ ul.menu li:hover {
 	font-size:16px;
 	line-height: 16px;
 	font-weight: bold;
-	color: #da4d08;
+	color: #f2299a;
 	text-align:center;
 	float:left;
 }
@@ -1106,8 +1116,8 @@ ul.menu li:hover {
 	height:auto;
 	margin:4% 20% 0% 20%;
 	padding:2.5% 0;
-	border-radius:14px;
-	background: linear-gradient(to bottom,  rgba(224,80,76,1) 0%,rgba(217,44,44,1) 100%);
+	border-radius:100px;
+	background-color:#f2299a;
     font-family: "微軟正黑體", "PingFang";
 	font-size:20px;
 	line-height: 20px;
@@ -1136,7 +1146,7 @@ ul.menu li:hover {
 	font-size:32px;
 	line-height: 32px;
 	font-weight: bold;
-	color: #e80b05;
+	color: #0080e2;
 	text-align:center;
 	float:left;
 }
@@ -1196,8 +1206,8 @@ ul.menu li:hover {
 	height:auto;
 	margin:4% 20% 0% 20%;
 	padding:2.5% 0;
-	border-radius:14px;
-	background: linear-gradient(to bottom,  rgba(224,80,76,1) 0%,rgba(217,44,44,1) 100%);
+	border-radius:100px;
+	background-color:#f2299a;
     font-family: "微軟正黑體", "PingFang";
 	font-size:20px;
 	line-height: 20px;
@@ -1222,7 +1232,7 @@ ul.menu li:hover {
 #wrapper .record ul {
 	width:80%;
 	height:auto;
-	margin:1.2% 10%;
+	margin:2% 10%;
     padding:0 0;
 	float:left;
 }
@@ -1272,7 +1282,7 @@ ul.menu li:hover {
 #wrapper .record .error {
 	width:80%;
 	height:auto;
-	margin:2% 10% 4% 10%;
+	margin:4% 10% 4% 10%;
 	padding:0 0;
 	font-family: "微軟正黑體", "PingFang";
 	font-size:15px;
@@ -1334,16 +1344,16 @@ ul.menu li:hover {
 	float:right;
 }
 .tab1r {
-	color: #e0504c; border-bottom:4px solid #e0504c;
+	color: #0080e2; border-bottom:4px solid #0080e2;
 }
 .tab1 {
-	color:#bd7270; border-bottom:none;
+	color:#88bce3; border-bottom:none;
 }
 .tab2r {
-	color: #e0504c; border-bottom:4px solid #e0504c;
+	color: #0080e2; border-bottom:4px solid #0080e2;
 }
 .tab2 {
-	color:#bd7270; border-bottom:none;
+	color:#88bce3; border-bottom:none;
 }
 #how {cursor:pointer;}
 #how2 {cursor:pointer;}
@@ -1359,14 +1369,20 @@ ul.menu li:hover {
 }
 #wrapper .record .date {
 	width:80%;
-	margin:0 10%;
+	margin:2% 10% 4% 10%;
+	padding:0 0;
+	float:left;
+}
+#wrapper .record .date2 {
+	width:80%;
+	margin:-1.6% 10% 3.8% 10%;
 	padding:0 0;
 	float:left;
 }
 #wrapper .record .date .title_box {
 	width:21%;
-	margin:1% 2% 0 0;
-	padding:2.5% 0;
+	margin:0% 2% 0 0;
+	padding:2% 0;
 	font-family: "微軟正黑體", "PingFang";
 	font-size:18px;
 	line-height: 18px;
@@ -1417,8 +1433,8 @@ ul.menu li:hover {
 	height:auto;
 	margin:1% 20% 0% 20%;
 	padding:2.5% 0;
-	border-radius:14px;
-	background: linear-gradient(to bottom,  rgba(232,11,5,1) 0%,rgba(186,5,5,1) 100%); 
+	border-radius:100px;
+	background-color:#f2299a;
     font-family: "微軟正黑體", "PingFang";
 	font-size:20px;
 	line-height: 20px;
@@ -1433,8 +1449,8 @@ ul.menu li:hover {
 	height:auto;
 	margin:1% 20% 0% 20%;
 	padding:2.5% 0;
-	border-radius:14px;
-	background: linear-gradient(to bottom,  rgba(232,11,5,1) 0%,rgba(186,5,5,1) 100%); 
+	border-radius:100px;
+	background-color:#f2299a;
     font-family: "微軟正黑體", "PingFang";
 	font-size:20px;
 	line-height: 20px;
@@ -1461,7 +1477,7 @@ ul.menu li:hover {
 .input {
 	width:72%;
 	height:auto;
-	margin:1% 0 0 0;
+	margin:0 0 0 0;
 	padding:1.5% 2%;
 	border:1px solid #666666;
 	border-radius:5px;
@@ -1481,8 +1497,6 @@ ul.menu li:hover {
 	height:auto;
 	margin:2% 16% 0% 16%;
 	padding:0% 0% 2% 0%;
-	border-top:1px solid #efefef;
-	background-color: #ffffff;
 	border-radius:5px;
 	float:left;
 }
@@ -1501,7 +1515,7 @@ ul.menu li:hover {
 	font-size:32px;
 	line-height: 32px;
 	font-weight: bold;
-	color: #d92c2c;
+	color: #f2299a;
 	text-align:center;
 	float:left;
 }
@@ -1710,7 +1724,7 @@ select {
     padding: 4px 10px;
     border-radius: 5px;
 	border:none;
-    background-color: #eb510e;
+    background-color: #f2299a;
 	font-family: "微軟正黑體";
 	font-size:11px;
 	line-height: 11px;

@@ -230,27 +230,6 @@ nav .nav_box .menu_box {
           justify-content: left;
   /*下拉選單*/
 }
-
-
-@media (max-width: 768px) {
-  nav .nav_box .menu_box {
-    width: 100%;
-  max-width: 100%;
-  list-style: none;
-  text-align: center;
-  vertical-align: middle;
-  position: relative;
-  padding: 15px 0% 15px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  /*下拉選單*/
-  }
-}
-
 nav .nav_box .menu_box li {
   margin:0 4px;
 	padding:2px 0 2px 0;
@@ -260,14 +239,6 @@ nav .nav_box .menu_box li {
 	border-radius:0px;
   font-size: 18px;
 }
-
-@media (max-width: 768px) {
-  nav .nav_box .menu_box li {F
-    width: 100%;
-    max-width: 100%;
-  }
-}
-
 nav .nav_box .menu_box li a {
   padding: 15px 20px;
   text-decoration: none;
@@ -276,29 +247,9 @@ nav .nav_box .menu_box li a {
   transition: 0.5s;
   cursor: pointer;
 }
-
-@media (max-width: 768px) {
-  nav .nav_box .menu_box li a {
-    display: block;
-    padding: 15px 20px;
-    text-align: left;
-    background-color: #333;
-    -webkit-transition: 0.5s;
-    transition: 0.5s;
-  }
-}
-
 nav .nav_box .menu_box li a.active {
   color: #ff9c00;
 }
-
-@media (max-width: 768px) {
-  nav .nav_box .menu_box li + li {
-    margin-left: 0px;
-    border-top: 1px solid #6c6c6c;
-  }
-}
-
 nav .nav_box .menu_box #nav_login > a {
   padding: 15px 15px 15px 0;
   background-image: url(https://image.mycard520.com/maplestorym/images/icon_arrow_w.png);
@@ -306,14 +257,6 @@ nav .nav_box .menu_box #nav_login > a {
   background-size: 8px;
   background-position: right center;
 }
-
-@media (max-width: 768px) {
-  nav .nav_box .menu_box #nav_login > a {
-    padding: 15px 20px;
-    background-position: right 20px center;
-  }
-}
-
 nav .nav_box .menu_box .drop-down {
   position: relative;
 }
@@ -333,13 +276,6 @@ nav .nav_box .menu_box .drop-down .submenu {
   -webkit-transition: opacity 0.5s ease;
   transition: opacity 0.5s ease;
 }
-
-@media (max-width: 768px) {
-  nav .nav_box .menu_box .drop-down .submenu {
-    top: 46px;
-  }
-}
-
 nav .nav_box .menu_box .drop-down .submenu .submenu-item {
   background: #333;
   color: #eee;
@@ -549,21 +485,40 @@ ul.menu li:hover {
 #wrapper {
 	width:100%;
 	height:auto;
-	margin:36px 0;
+	margin:0;
 	padding:0 0 0 0;
-	background-image: url(../img/main_visual.jpg);
-	background-size:100%;
-	background-repeat: no-repeat;
+	background-color:#2a2623;
 	float:left;
 }
 #wrapper .main_visual {
 	width:100%;
-	height:300px;
-	margin:0 0 0 0;
+	height:auto;
+	margin:36px 0 0 0;
 	padding:0 0;
+	background-image: url(../img/main_visual.jpg);
+	background-size:100%;
+	background-position: top center;
+	background-repeat: no-repeat;
 	float:left;
 }
-#wrapper .main_visual img {width:100%;}
+#screen {
+    position:relative;
+	z-index:5;
+	width:100%;
+	height:auto;
+	margin:0;
+	padding:0;
+	display:block;
+	background: linear-gradient(to bottom,  rgba(51,51,51,0.8) 0%,rgba(51,51,51,0.7) 100%);
+    float:left;
+}
+#wrapper #space {
+	width:100%;
+	height:18px;
+	margin:0;
+	padding:0;
+	float:left;
+}
 
 
 /*登入彈窗-1*/
@@ -914,7 +869,7 @@ ul.menu li:hover {
 #wrapper #tresure_title {
     position:relative;
 	width:76%;
-	margin:1% 12% 0% 12%;
+	margin:280px 12% 0% 12%;
 	padding:0% 0% 0.5% 0%;
 	float:left;
 }
@@ -1143,7 +1098,7 @@ ul.menu li:hover {
 	height:auto;
 	margin:4% 20% 0% 20%;
 	padding:2.5% 0;
-	border-radius:14px;
+	border-radius:0px;
 	background: linear-gradient(to bottom,  rgba(224,80,76,1) 0%,rgba(217,44,44,1) 100%);
     font-family: "微軟正黑體", "PingFang"; 
 	font-size:20px;
@@ -1233,7 +1188,7 @@ ul.menu li:hover {
 	height:auto;
 	margin:4% 20% 0% 20%;
 	padding:2.5% 0;
-	border-radius:14px;
+	border-radius:0px;
 	background: linear-gradient(to bottom,  rgba(224,80,76,1) 0%,rgba(217,44,44,1) 100%);
     font-family: "微軟正黑體", "PingFang"; 
 	font-size:20px;
@@ -1253,7 +1208,7 @@ ul.menu li:hover {
 	margin:8% 35% 0 35%;
 	padding:1.5% 0 2% 0;
 	border-radius:5px;
-	background-color:#f9f9f9; 
+	background-color:#e4dcca;
 	float:left;
 }
 #wrapper .record ul {
@@ -1399,8 +1354,8 @@ ul.menu li:hover {
 	float:left;
 }
 #wrapper .record .date .title_box {
-	width:25%;
-	margin:1% 2% 0 0;
+	width:28%;
+	margin:1% 0% 0 0;
 	padding:2.5% 0;
 	font-family: "微軟正黑體", "PingFang"; 
 	font-size:18px;
@@ -1516,8 +1471,7 @@ ul.menu li:hover {
 	height:auto;
 	margin:2% 5% 0% 5%;
 	padding:0% 0% 2% 0%;
-	border-top:1px solid #efefef;
-	background-color: #ffffff;
+	background-color:#2a2623;
 	border-radius:5px;
 	float:left;
 }
