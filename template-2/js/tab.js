@@ -11,7 +11,6 @@ $(document).ready(function() {
 	$("#server").hide()
 	$("#character").hide()
 	$(".btn_confirm").hide()
-	$("#btn_search1").hide()
 
 	$("#btn_research1").hide()
 	$("#search_team").hide()
