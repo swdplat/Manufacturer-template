@@ -1,5 +1,6 @@
-﻿#wrapper #login_callout h6<!DOCTYPE html>
-<html lang["zh-tw">
+﻿#wrapper #login_callout h6
+<!DOCTYPE html>
+<html lang="zh-tw">
 
 <head>
 <meta charset="utf-8">
@@ -25,22 +26,14 @@
 
 
 <!-- jquery引入檔 -->	
-<script src="js/jquery-1.7.1.min.js"></script>
-<script type="text/javascript" src="js/tab.js"></script>
-<script type="text/javascript" src="js/callout.js"></script>
-<script type="text/javascript" src="js/dropdown.js"></script>
-<script type="text/javascript" src="js/index.js"></script>
+<script src="./js/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="./js/tab.js"></script>
+<script type="text/javascript" src="./js/callout.js"></script>
+<script type="text/javascript" src="./js/dropdown.js"></script>
+<script type="text/javascript" src="./js/index.js"></script>
 	
 
-<script language="javascript">
-$(function() {
-	        $('#btn_top').click(function() {
-                $('html,body').animate({
-                    scrollTop: $('#wrapper').offset().top
-                }, 400);
-            });
-        });
-</script>
+
 
 </head>
 
@@ -360,6 +353,12 @@ $(function() {
   </div>
 </div>
 <div id="btn_top"><img src="img/btn_top.svg" alt=""/></div>	
+
+<script>
+$('#btn_top').on('click', function () {
+  $('html, body').stop(true).animate({ scrollTop: 0 }, 400);
+});
+</script>
 
 </body>
 
